@@ -1,0 +1,18 @@
+/* REMOVING DEFAULT PADDING AND MARGINS */
+html,body{ margin:0; padding:0; background:rgb(135, 173, 197); }
+
+/* CONTAINER FOR FORM */
+.container{ position:relative; padding:5px; min-width:1245px; top:300px; }
+.container .form-1{ height:200px; width:980px; position:absolute; left:24%; }
+
+/* WARNING FORMAT FOR USERS FOR INPUTTING WRONG DATA OR WRONG CONVERSION TYPE SELECTION */
+.warning{ text-align:center; font-size:20px; color:red; font-weight:bold; }
+
+/* FORM FORMATTING */
+form{ margin-left:90px; }
+label{ font-size:20px; }
+
+input[type="submit"]{ border:0; padding:10px; font-size:20px; margin-top:5px; margin-left:35%; background-color:rgb(175, 187, 245); }
+input[type="submit"]:hover{ background-color:rgb(57, 64, 102); cursor:pointer; }
+
+select{ border:0; background:rgb(224, 181, 181); font-size:15px; }

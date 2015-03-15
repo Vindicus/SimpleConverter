@@ -30,6 +30,10 @@ include(ROOT_PATH . "submit.php");
 		 				<option value="CN">China</option>
 		 				<option value="Fahrenheit">Fahrenheit</option>
 		 				<option value="Celsius">Celsius</option>
+		 				<option value="Pound">Pound</option>
+		 				<option value="Kilogram">Kilogram</option>
+		 				<option value="Gram">Gram</option>
+		 				<option value="Ounce">Ounce</option>
 		 			</select>
 		 	
 		 			<label for="conv-1">Type in a value:</label>
@@ -45,6 +49,10 @@ include(ROOT_PATH . "submit.php");
 				 		<option value="CN">China</option>
 				 		<option value="Fahrenheit">Fahrenheit</option>
 				 		<option value="Celsius">Celsius</option>
+				 		<option value="Pound">Pound</option>
+		 				<option value="Kilogram">Kilogram</option>
+		 				<option value="Gram">Gram</option>
+		 				<option value="Ounce">Ounce</option>
 		 			</select>
 		 	
 		 			<input type="submit" name="submit" id="submit" value="Convert Now">

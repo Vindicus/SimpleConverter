@@ -58,4 +58,35 @@ $conversion_data[1] = array(
 		
 		return $ConvertedValueString;
 });
+
+$conversion_data[2] = array(
+	"conversion" => ["Pound", "Kilogram", "Gram", "Ounce"], //Inside this associative array has a nested array containing weight types
+	"convertNow" => function($selectionA, $selectionB, $value){
+			$ConvertedValueString = "";
+			
+			if ($selectionA == "Pound"){
+				//Converting from Pound to Kilogram, Gram, Ounce
+				//arguments are "Converted To" value, user input value, Pound, Kilogram, Ounce
+				$ConvertedValueString = mass($selectionB, $value, 1.00000, 0.453592, 453.592, 16);
+			}
+			
+			if ($selectionA == "Kilogram"){
+				//Converting from Kilogram to Pound, Gram, Ounce
+				//arguments are "Converted To" value, user input value, Pound, Kilogram, Ounce
+				$ConvertedValueString = mass($selectionB, $value, 2.20462, 1.00000, 1000, 35.274);
+			}
+			
+			if ($selectionA == "Gram"){
+				//Converting from Gram to Pound, Kilogram, Ounce
+				//arguments are "Converted To" value, user input value, Pound, Kilogram, Gram, Ounce
+				$ConvertedValueString = mass($selectionB, $value, 0.00220462, 0.001, 1.00000, 0.035274);
+			}
+			
+			if ($selectionA == "Ounce"){
+				//Converting from Ounce to Pound, Kilogram, Gram
+				//arguments are "Converted To" value, user input value, Pound, Kilogram, Gram, Ounce
+				$ConvertedValueString = mass($selectionB, $value, 0.0625, 0.0283495, 28.3495, 1.00000);
+			}
+			return $ConvertedValueString;
+});
 ?>

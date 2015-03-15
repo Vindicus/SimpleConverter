@@ -11,7 +11,6 @@ function currency($selectionB, $value, $USD, $HK, $TW, $CN){
 			$FinalValueString = "$";
 			
 			break;	
-			
 		case "HK":
 			$FinalValue = $value * $HK;
 			$FinalValueString = "HK$";
@@ -34,8 +33,6 @@ function currency($selectionB, $value, $USD, $HK, $TW, $CN){
 	
 	return $FinalValueString;
 }
-
-
 
 // This function runs the temperature for Fahrenheit and Celsius
 function temperature($selectionA, $selectionB, $value){
@@ -76,6 +73,43 @@ function temperature($selectionA, $selectionB, $value){
 			break;
 	}
 	// Format the calculated value and turn it into a string
+	$FinalValueString = $FinalValue . $FinalValueString;
+	
+	return $FinalValueString;
+}
+
+// This function runs the weight for Pound, Kilogram, Gram, Ounce
+function mass($selectionB, $value, $Pound, $Kilogram, $Gram, $Ounce){
+	$FinalValue = 0;  // Declaring variable, storing the calculated value
+	$FinalValueString = "";  // Declaring variable, storing the string character such as lb, kg
+	
+	// Runs the case statement and match it against the "Convert To" value and run its specified calculation
+	switch($selectionB){
+		case "Pound":
+			$FinalValue = $value * $Pound;
+			$FinalValueString = "lb";
+
+			break;	
+		case "Kilogram":
+			$FinalValue = $value * $Kilogram;
+			$FinalValueString = "kg";
+			
+			break;
+		
+		case "Gram":
+			$FinalValue = $value * $Gram;
+			$FinalValueString = "g";
+			
+			break;
+		
+		case "Ounce":
+			$FinalValue = $value * $Ounce;
+			$FinalValueString = "oz";
+			
+			break;
+	}
+	
+	// Format the calculated value and turn it into a string currency format	
 	$FinalValueString = $FinalValue . $FinalValueString;
 	
 	return $FinalValueString;
